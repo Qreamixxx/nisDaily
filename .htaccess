@@ -1,0 +1,6 @@
+# Keep private files private (XAMPP/Apache). On a real server, point the web root at this folder
+# and make sure src/, templates/, lang/, migrations/, bin/, tests/ and .env are NOT downloadable.
+Options -Indexes
+<FilesMatch "^(\.env.*|composer\.(json|lock)|.*\.sql)$">
+    Require all denied
+</FilesMatch>
